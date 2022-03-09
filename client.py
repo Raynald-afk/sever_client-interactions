@@ -3,7 +3,7 @@ import socket
 PORT = 5050
 FORMAT = "utf-8"
 HEADER = 64
-DISCONNET = "diconnect"
+DISCONNET = "disconnect"
 SEVER = "192.168.43.186"
 ADDR = (SEVER,PORT)
 
@@ -19,8 +19,11 @@ def send(msg):
     client.send(send_length)
     client.send(message)
 
+
+
+
 user = ""
-while user != "off":
+while user != DISCONNET:
     user = input("Enter a message to send to the sever: ")
     send(user)
 
